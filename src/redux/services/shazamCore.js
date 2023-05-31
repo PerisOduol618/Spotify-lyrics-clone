@@ -15,4 +15,7 @@ const options = {
 
 export const shazamCoreApi = createApi({
     reducerPath: 'shazamCoreApi',
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'https://shazam.p.rapidapi.com'
+    })
 });
