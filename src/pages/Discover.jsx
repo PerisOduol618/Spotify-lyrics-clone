@@ -28,6 +28,7 @@ const Discover = () => {
       </div>
 
       <div className="flex flex-wrap sm:justify-start justify-center gap-8 ">
+      {/* {data.length > 0 && data.map((song, i)=>( */}
         {[data].map((song, i)=>(
             <SongCard 
             key={song.key}
@@ -36,6 +37,7 @@ const Discover = () => {
             />
 
         ))}
+        <SongCard/>
       </div>
     </div>
   );
