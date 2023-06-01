@@ -5,14 +5,14 @@ export const shazamCoreApi = createApi({
     reducerPath: 'shazamCoreApi',
     baseQuery: fetchBaseQuery({
         baseUrl: 'https://shazam.p.rapidapi.com',
-        prepareHeaders:() => {
+        prepareHeaders:(headers) => {
             headers.set('X-RapidAPI-Key','1559284210msh9201de8ba996a92p1b265djsn24a95e1305cf');
 
             return headers;
         }, 
     }),
     endpoints: (builder) => ({
-        getTopCharts: builder.query({query: '/cahrts/world'}),
+        getTopCharts: builder.query({query: () => '/charts/track/'}), 
     }),
 });
 
